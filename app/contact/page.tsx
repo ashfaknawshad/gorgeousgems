@@ -211,14 +211,14 @@ export default function Contact() {
                                         <span className={styles.infoIcon}>📧</span>
                                         <div>
                                             <p className={styles.infoLabel}>Email</p>
-                                            <p className={styles.infoValue}>info@gorgeousgems.com</p>
+                                            <p className={styles.infoValue}><a href="mailto:inzamijas23@outlook.com">inzamijas23@outlook.com</a></p>
                                         </div>
                                     </div>
                                     <div className={styles.infoItem}>
                                         <span className={styles.infoIcon}>📞</span>
                                         <div>
                                             <p className={styles.infoLabel}>Phone</p>
-                                            <p className={styles.infoValue}>+1 (555) 123-4567</p>
+                                            <p className={styles.infoValue}>+94 76 266 9659</p>
                                         </div>
                                     </div>
                                     <div className={styles.infoItem}>
@@ -226,9 +226,10 @@ export default function Contact() {
                                         <div>
                                             <p className={styles.infoLabel}>Address</p>
                                             <p className={styles.infoValue}>
-                                                123 Gem Street<br />
-                                                Jewelry District<br />
-                                                New York, NY 10001
+                                                16 Adnives Road<br />
+                                                Periyamulla<br />
+                                                Negombo <br />
+                                                Sri Lanka
                                             </p>
                                         </div>
                                     </div>
