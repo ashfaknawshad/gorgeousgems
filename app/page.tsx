@@ -1,6 +1,7 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -12,6 +13,8 @@ export default function Home() {
         <section className={styles.hero}>
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>Gorgeous Gems</h1>
+            <p className={styles.businessTagline}>Dealers in Export & Import of Gem Stones</p>
+            <p className={styles.regNumber}>Reg No: WVI15220</p>
             <p className={styles.heroSubtitle}>Elegance in Every Cut</p>
             <p className={styles.heroDescription}>
               Discover our exquisite collection of rare and beautiful gemstones,
@@ -58,6 +61,47 @@ export default function Home() {
                   Personalized consultation to help you find the perfect gemstone
                   for your needs.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* About the Owner Section */}
+        <section className={`section ${styles.owner}`}>
+          <div className="container">
+            <h2 className={`text-center mb-xl ${styles.sectionTitle}`}>
+              Meet the Visionary
+            </h2>
+            <div className={styles.ownerContent}>
+              <div className={styles.ownerText}>
+                <h3 className="mb-md">Mr. Inzam Ijas</h3>
+                <p className="mb-md">
+                  At just 23 years old, Mr. Inzam Ijas has transformed his lifelong 
+                  passion for gemstones into a thriving business. His fascination with 
+                  gems began in his teenage years, and what started as a hobby quickly 
+                  became an unwavering commitment to excellence in the gemstone industry.
+                </p>
+                <p className="mb-md">
+                  Driven by determination and an entrepreneurial spirit, Inzam embarked 
+                  on a remarkable journey, traveling solo to prestigious gem exhibitions 
+                  across the globe. From the vibrant markets of Bangkok to the bustling 
+                  trade shows in China, Bangkok and Germany, he personally 
+                  sourced each gemstone, building relationships with miners, cutters, 
+                  and dealers along the way.
+                </p>
+                <p>
+                  Today, Gorgeous Gems stands as a testament to his dedication, offering 
+                  a carefully curated collection of rare and exquisite gemstones. Every 
+                  piece reflects Inzam's keen eye for quality, his deep knowledge of the 
+                  craft, and his commitment to bringing the world's finest gems to 
+                  discerning collectors and enthusiasts.
+                </p>
+              </div>
+              <div className={styles.ownerImage}>
+                <div className={styles.imagePlaceholder}>
+                  {<Image src="/inzam-ijas.jpeg" alt="Mr. Inzam Ijas" fill style={{ objectFit: 'cover' }} />}
+                  
+                </div>
               </div>
             </div>
           </div>

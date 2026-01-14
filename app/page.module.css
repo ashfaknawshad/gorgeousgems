@@ -37,6 +37,23 @@
     letter-spacing: 0.02em;
 }
 
+.businessTagline {
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    color: var(--color-charcoal);
+    margin-bottom: var(--spacing-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.regNumber {
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    color: var(--color-charcoal-light);
+    margin-bottom: var(--spacing-xs);
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
 .heroSubtitle {
     font-family: var(--font-serif);
     font-size: clamp(1.25rem, 2.5vw, 1.75rem);
@@ -89,6 +106,87 @@
     background: linear-gradient(135deg, var(--color-beige) 0%, var(--color-cream) 100%);
 }
 
+/* Owner Section */
+.owner {
+    background-color: var(--color-white);
+}
+
+.ownerContent {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.ownerText {
+    padding-right: var(--spacing-lg);
+}
+
+.ownerText h3 {
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    color: var(--color-gold);
+    font-family: var(--font-serif);
+}
+
+.ownerText p {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: var(--color-charcoal-light);
+}
+
+.ownerImage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+}
+
+.imagePlaceholder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-beige) 100%);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 3px solid var(--color-gold);
+}
+
+.imagePlaceholder img {
+    object-fit: contain;
+    width: 100% !important;
+    height: 100% !important;
+    position: relative !important;
+}
+
+.placeholderText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--color-charcoal-light);
+}
+
+.placeholderText span {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    opacity: 0.5;
+}
+
+.placeholderText p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-charcoal);
+    margin-bottom: var(--spacing-xs);
+}
+
+.placeholderText small {
+    font-size: 0.875rem;
+    color: var(--color-gold);
+    font-style: italic;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero {
@@ -110,6 +208,22 @@
 
     .featureCard {
         padding: var(--spacing-lg);
+    }
+
+    .ownerContent {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .ownerText {
+        padding-right: 0;
+        order: 2;
+    }
+
+    .ownerImage {
+        order: 1;
+        aspect-ratio: 3 / 4;
+        max-height: 500px;
     }
 }
 
