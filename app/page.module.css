@@ -1,0 +1,128 @@
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-beige) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 20% 50%, rgba(201, 169, 97, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(201, 169, 97, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.heroContent {
+    text-align: center;
+    max-width: 800px;
+    padding: var(--spacing-xl);
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 1s ease-out;
+}
+
+.heroTitle {
+    font-size: clamp(3rem, 6vw, 5rem);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-charcoal);
+    letter-spacing: 0.02em;
+}
+
+.heroSubtitle {
+    font-family: var(--font-serif);
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    color: var(--color-gold);
+    margin-bottom: var(--spacing-md);
+    font-style: italic;
+    font-weight: 400;
+}
+
+.heroDescription {
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    color: var(--color-charcoal-light);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.8;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heroButtons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Features Section */
+.features {
+    background-color: var(--color-white);
+}
+
+.sectionTitle {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: var(--color-charcoal);
+}
+
+.featureCard {
+    text-align: center;
+    padding: var(--spacing-xl);
+}
+
+.featureIcon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+    filter: grayscale(20%);
+}
+
+/* Call to Action Section */
+.cta {
+    background: linear-gradient(135deg, var(--color-beige) 0%, var(--color-cream) 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 70vh;
+    }
+
+    .heroContent {
+        padding: var(--spacing-md);
+    }
+
+    .heroButtons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .heroButtons .btn {
+        width: 100%;
+    }
+
+    .featureCard {
+        padding: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1.25rem;
+    }
+
+    .featureIcon {
+        font-size: 2.5rem;
+    }
+}

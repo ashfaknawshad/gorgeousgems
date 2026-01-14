@@ -1,65 +1,82 @@
-import Image from "next/image";
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+import Link from 'next/link';
+import styles from './page.module.css';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <Navigation />
+      <main>
+        {/* Hero Section */}
+        <section className={styles.hero}>
+          <div className={styles.heroContent}>
+            <h1 className={styles.heroTitle}>Gorgeous Gems</h1>
+            <p className={styles.heroSubtitle}>Elegance in Every Cut</p>
+            <p className={styles.heroDescription}>
+              Discover our exquisite collection of rare and beautiful gemstones,
+              carefully curated for those who appreciate timeless elegance.
+            </p>
+            <div className={styles.heroButtons}>
+              <Link href="/gallery" className="btn btn-primary">
+                View Collection
+              </Link>
+              <Link href="/contact" className="btn btn-secondary">
+                Get in Touch
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className={`section ${styles.features}`}>
+          <div className="container">
+            <h2 className={`text-center mb-xl ${styles.sectionTitle}`}>
+              Why Choose Gorgeous Gems
+            </h2>
+            <div className="grid grid-3">
+              <div className={`card ${styles.featureCard}`}>
+                <div className={styles.featureIcon}>💎</div>
+                <h3 className="mb-sm">Premium Quality</h3>
+                <p>
+                  Each gemstone is hand-selected for its exceptional quality,
+                  clarity, and brilliance.
+                </p>
+              </div>
+              <div className={`card ${styles.featureCard}`}>
+                <div className={styles.featureIcon}>✨</div>
+                <h3 className="mb-sm">Rare Collection</h3>
+                <p>
+                  Access to exclusive and rare gemstones from around the world,
+                  sourced with care.
+                </p>
+              </div>
+              <div className={`card ${styles.featureCard}`}>
+                <div className={styles.featureIcon}>🤝</div>
+                <h3 className="mb-sm">Expert Guidance</h3>
+                <p>
+                  Personalized consultation to help you find the perfect gemstone
+                  for your needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action Section */}
+        <section className={`section-sm ${styles.cta}`}>
+          <div className="container text-center">
+            <h2 className="mb-md">Ready to Explore?</h2>
+            <p className="mb-lg" style={{ fontSize: '1.125rem', maxWidth: '600px', margin: '0 auto var(--spacing-lg)' }}>
+              Browse our gallery of stunning gemstones or contact us for a personalized consultation.
+            </p>
+            <Link href="/gallery" className="btn btn-primary">
+              Explore Gallery
+            </Link>
+          </div>
+        </section>
       </main>
-    </div>
+      <Footer />
+    </>
   );
 }
