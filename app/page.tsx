@@ -14,7 +14,7 @@ export default function Home() {
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>Gorgeous Gems</h1>
             <p className={styles.businessTagline}>Dealers in Export & Import of Gem Stones</p>
-            <p className={styles.regNumber}>Reg No: WVI15220</p>
+            <p className={styles.regNumber}>Reg No: WVI5220</p>
             <p className={styles.heroSubtitle}>Elegance in Every Cut</p>
             <p className={styles.heroDescription}>
               Discover our exquisite collection of rare and beautiful gemstones,
@@ -85,7 +85,7 @@ export default function Home() {
                   Driven by determination and an entrepreneurial spirit, Inzam embarked 
                   on a remarkable journey, traveling solo to prestigious gem exhibitions 
                   across the globe. From the vibrant markets of Bangkok to the bustling 
-                  trade shows in China, Bangkok and Germany, he personally 
+                  trade shows in China and Germany, he personally 
                   sourced each gemstone, building relationships with miners, cutters, 
                   and dealers along the way.
                 </p>
